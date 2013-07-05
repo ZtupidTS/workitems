@@ -1,8 +1,8 @@
 #Region ;**** 参数创建于 ACNWrapper_GUI ****
-#PRE_Icon=L:\测试脚本\更新助手.exe
+#PRE_icon=简历更新助手.exe|-1
 #PRE_Outfile=C:\Users\chtyfox\Desktop\简历更新助手.exe
 #PRE_Compression=4
-#PRE_Res_Fileversion=1.0.0.3
+#PRE_Res_Fileversion=1.0.0.11
 #PRE_Res_Fileversion_AutoIncrement=p
 #PRE_Res_requestedExecutionLevel=None
 #EndRegion ;**** 参数创建于 ACNWrapper_GUI ****
@@ -59,18 +59,19 @@ GUISetState(@SW_HIDE,$gx)
 _IENavigate($oIE, "http://zh-hr.com")
 
 $username = 'zhqf2001'
-$password = 'zhqf19831022'
+$password = 'zhqf19831022qf19831022'
 $Ele = _IEGetObjById($oIE,"loginname")
 _IEFormElementSetValue($Ele,$username)
 $Ele = _IEGetObjById($oIE,"loginpwd")
 _IEFormElementSetValue($Ele,$password)
 $Ele = _IETagNameGetCollection($oIE,"SPAN",18)
 _IEAction($Ele,"click") ;点击
-_IELoadWait($oIE,1000)
-Send("{enter}")
+_IELoadWait($o
+Sleep(3000)
 ;更新
 $Ele = _IETagNameGetCollection($oIE,"SPAN",19)
 _IEAction($Ele, "click")
+, "click")
 
 
 
@@ -134,4 +135,4 @@ EndFunc  ;==>启用
 
 Func ExitScript()
    Exit  ; $Quit
-EndFunc ;==>退出
+EndFun
